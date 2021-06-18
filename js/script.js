@@ -4,10 +4,10 @@
 
 const items = [1, 2, 40, 30, 8, 50, 25, 29, 80];
 
-let numeroUno = parseInt(prompt('inserire un numero da 0 a '  + ((items.length)-2)));
-let numeroDue = parseInt(prompt('inserire un numero da ' + numeroUno + ' a ' + items.length + ' e che sia diverso da prima'));
+let numeroUno = parseInt(prompt('inserire un numero da 0 a '  + (items.length-2)));
+let numeroDue = parseInt(prompt('inserire un numero da ' + (numeroUno+1) + ' a ' + items.length + ' e che sia diverso da prima'));
 
-console.log(getRange(items, numeroUno, numeroDue));
+
 getRange(items, numeroUno, numeroDue);
 function getRange(items, numeroUno, numeroDue){
     
@@ -16,9 +16,10 @@ function getRange(items, numeroUno, numeroDue){
             return element;
         }        
     });   
-
     return range;
 }
+console.log(getRange(items, numeroUno, numeroDue));
+
 
 
 
