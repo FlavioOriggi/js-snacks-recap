@@ -4,19 +4,25 @@
 
 const items = [1, 2, 40, 30, 8, 50, 25, 29, 80];
 
-let a = parseInt(prompt('inserire un numero da 1 a '  + ((items.length)-2)));
-let b = parseInt(prompt('inserire un numero da ' + a + ' a ' + items.length + ' e che sia diverso da prima'));
+let numeroUno = parseInt(prompt('inserire un numero da 0 a '  + ((items.length)-2)));
+let numeroDue = parseInt(prompt('inserire un numero da ' + numeroUno + ' a ' + items.length + ' e che sia diverso da prima'));
 
-let range;
-let newItems = [];
-
-document.getElementById('testo').innerHTML += newItems;
-function getRange(items, a, b){
-    range = items.filter((element) =>{       
-        if(element >= a && element <= b){
-            newItems.push(element);
+console.log(getRange(items, numeroUno, numeroDue));
+getRange(items, numeroUno, numeroDue);
+function getRange(items, numeroUno, numeroDue){
+    
+    let range = items.filter((element, index) =>{       
+        if(index >= numeroUno && index <= numeroDue){
+            return element;
         }        
-    });    
+    });   
+
+    return range;
 }
+
+
+
+
+
 
 
