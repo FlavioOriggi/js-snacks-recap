@@ -5,25 +5,17 @@
 const items = [1, 2, 40, 30, 8, 50, 25, 29, 80];
 
 let numeroUno = parseInt(prompt('inserire un numero da 0 a '  + (items.length-2)));
-let numeroDue = parseInt(prompt('inserire un numero da ' + (numeroUno+1) + ' a ' + items.length + ' e che sia diverso da prima'));
+let numeroDue = parseInt(prompt('inserire un numero da ' + (numeroUno+1) + ' a ' + (items.length-1) + ' e che sia diverso da prima'));
 
+document.getElementById('testo1').innerHTML = 'hai inserito i numeri ' + numeroUno + ' e ' + numeroDue;
 
-// getRange(items, numeroUno, numeroDue);
-// function getRange(items, numeroUno, numeroDue){
-    
-    let range = items.filter((element, index) =>{       
-        if(index >= numeroUno && index <= numeroDue){
-            return element;
-        }     
-    });   
-    console.log(range);
+let range = items.filter((element, index) =>{       
+    if(index >= numeroUno && index <= numeroDue){
+        return element;
+    }     
+});   
+document.getElementById('testo2').innerHTML = 'I valori che hanno la posizione compresa tra i due numeri sono ' + range;
 
-
-
-    // return range;
-
-// }
-// console.log(getRange(items, numeroUno, numeroDue));
 
 
 
