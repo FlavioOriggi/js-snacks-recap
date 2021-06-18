@@ -9,16 +9,15 @@ let b = parseInt(prompt('inserire un numero da ' + a + ' a ' + items.length + ' 
 
 let range;
 
-getRange(array, a, b);
+getRange(items, a, b);
 
 function getRange(items, a, b){
     range = items.filter((element) =>{
-        var newItems = [];
+        const newItems = [];
         if(element >= a && element <= b){
-            newItems.push(array[i]);
-        };
-    });
-    
-};
+            console.log(range);
+        }
+    });    
+}
 
-console.log(newItems);
+
