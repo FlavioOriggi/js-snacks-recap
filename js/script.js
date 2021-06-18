@@ -8,17 +8,22 @@ let numeroUno = parseInt(prompt('inserire un numero da 0 a '  + (items.length-2)
 let numeroDue = parseInt(prompt('inserire un numero da ' + (numeroUno+1) + ' a ' + items.length + ' e che sia diverso da prima'));
 
 
-getRange(items, numeroUno, numeroDue);
-function getRange(items, numeroUno, numeroDue){
+// getRange(items, numeroUno, numeroDue);
+// function getRange(items, numeroUno, numeroDue){
     
     let range = items.filter((element, index) =>{       
         if(index >= numeroUno && index <= numeroDue){
             return element;
-        }        
+        }     
     });   
-    return range;
-}
-console.log(getRange(items, numeroUno, numeroDue));
+    console.log(range);
+
+
+
+    // return range;
+
+// }
+// console.log(getRange(items, numeroUno, numeroDue));
 
 
 
