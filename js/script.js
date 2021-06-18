@@ -4,10 +4,10 @@
 
 const items = [1, 2, 40, 30, 8, 50, 25, 29, 80];
 
-// const a = parseInt(prompt('inserire un numero da 0 a '  + items.length));
-// const b = parseInt(prompt('inserire un numero da 0 a ' + items.length + ' ma che sia diverso da prima'));
+let a = parseInt(prompt('inserire un numero da 0 a '  + ((items.length)-2)));
+let b = parseInt(prompt('inserire un numero da ' + a + ' a ' + items.length + ' e che sia diverso da prima'));
 
-// const newItems = []; 
+const newItems = []; 
 
 const range = items.map((items, a, b) => {
     return items.getRangeArr(items, a, b);
