@@ -7,9 +7,18 @@ const items = [1, 2, 40, 30, 8, 50, 25, 29, 80];
 let a = parseInt(prompt('inserire un numero da 0 a '  + ((items.length)-2)));
 let b = parseInt(prompt('inserire un numero da ' + a + ' a ' + items.length + ' e che sia diverso da prima'));
 
-const newItems = []; 
+let range;
 
-const range = items.map((items, a, b) => {
-    return items.getRangeArr(items, a, b);
-});
-console.log(getRangeArr(items, a, b));
+getRange(array, a, b);
+
+function getRange(items, a, b){
+    range = items.filter((element) =>{
+        var newItems = [];
+        if(element >= a && element <= b){
+            newItems.push(array[i]);
+        };
+    });
+    
+};
+
+console.log(newItems);
